@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "test"
+  description: "dsaas"
+  annotations:
+    github.com/project-slug: cwiklik/test
+    backstage.io/kubernetes-id: "test"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "user:default/guest"

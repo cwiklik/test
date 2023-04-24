@@ -1,0 +1,21 @@
+# below must much xrd's <group>/<version>
+apiVersion: crossplane.io/v1alpha1
+kind: SkyClusterInstance
+metadata:
+  name: test
+  namespace: default
+  labels:
+    'backstage.io/kubernetes-id': test
+
+spec:
+  compositionSelector:
+    matchLabels:
+      ibm.sky.io/provider: aws
+      ibm.sky.io/environment: dev
+      ibm.sky.io/type: text-classifier
+      ibm.sky.io/source: huggingface
+  parameters:
+     nodes:
+       count: 1
+     accelerators:
+       type: V100:4
